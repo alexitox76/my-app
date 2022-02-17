@@ -1,4 +1,4 @@
-node('windows'){
+node(){
     stage('SCM Checkout'){
         git 'https://github.com/alexitox76/my-app'
     }
