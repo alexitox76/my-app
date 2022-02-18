@@ -1,7 +1,7 @@
 node{
 // demo
    stage('SCM Checkout'){
-     git 'https://github.com/javahometech/my-app'
+     git 'https://github.com/alexitox76/my-app'
    }
    stage('Compile-Package'){
       // Get maven home path
@@ -11,7 +11,7 @@ node{
    
    stage('SonarQube Analysis') {
         def mvnHome =  tool name: 'maven-3', type: 'maven'
-        withSonarQubeEnv('sonar-6') { 
+        withSonarQubeEnv('sonar') { 
           sh "${mvnHome}/bin/mvn sonar:sonar"
         }
     }
